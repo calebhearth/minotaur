@@ -1,29 +1,14 @@
 # Minotaur
 
-TODO: Write a gem description
+Extract images, videos, and iframes from html strings.
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'minotaur'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install minotaur
+![William Blake's image of the Minotaur to illustrate Inferno
+XII](http://upload.wikimedia.org/wikipedia/commons/d/db/Blake_Dante_Hell_XII.jpg)
 
 ## Usage
 
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+```ruby
+html = # download or build an html string
+Minotaur::Document.new(html).preview_elements
+# => ['<img>', '<video></video>', '<iframe></iframe>']
+```
