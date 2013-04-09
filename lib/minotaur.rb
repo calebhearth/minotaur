@@ -1,4 +1,6 @@
-require "minotaur/version"
+require 'rubygems'
+require 'minotaur/version'
+require 'minotaur/document'
 
 module Minotaur
   # Your code goes here...

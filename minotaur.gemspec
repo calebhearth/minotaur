@@ -9,17 +9,25 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Caleb Thompson']
   spec.email         = ['cjaysson@gmail.com']
   spec.description   = <<-DESCRIPTION
-If all the ways I have been along were marked on a map and joined up with a
-line, it might represent a minotaur.
-DESCRIPTION
+    If all the ways I have been along were marked on a map and joined up with a
+    line, it might represent a minotaur.
+  DESCRIPTION
   spec.summary       = 'it might represent a minotaur'
   spec.homepage      = 'https://github.com/calebthompson/minotaur'
   spec.license       = 'MIT'
+  spec.required_ruby_version = '>= 2.0.0'
 
   spec.files         = `git ls-files`.split($/)
   spec.test_files    = spec.files.grep(%r{^spec/})
   spec.require_paths = ['lib']
 
+  spec.requirements << 'libxml2'
+  spec.requirements << 'libxslt'
+
+  spec.add_dependency 'nokogiri'
+
   spec.add_development_dependency 'bundler', '~> 1.3'
   spec.add_development_dependency 'rake'
+  spec.add_development_dependency 'pry'
+  spec.add_development_dependency 'rspec'
 end
