@@ -15,7 +15,6 @@ Gem::Specification.new do |spec|
   spec.summary       = 'it might represent a minotaur'
   spec.homepage      = 'https://github.com/calebthompson/minotaur'
   spec.license       = 'MIT'
-  spec.required_ruby_version = '>= 2.0.0'
 
   spec.files         = `git ls-files`.split($/)
   spec.test_files    = spec.files.grep(%r{^spec/})
